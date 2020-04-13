@@ -24,6 +24,8 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
+  String output = "0";
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -57,9 +59,10 @@ class _MyHomePageState extends State<MyHomePage> {
       child: Column(
         children: <Widget>[
           Container(
+            alignment: Alignment.centerRight,
             padding: EdgeInsets.symmetric(vertical: 24.0, horizontal: 12.0),
             child: Text(
-              "0",
+              output,
               style: TextStyle(
                 fontSize: 38.0,
                 fontWeight: FontWeight.bold,
