@@ -34,11 +34,17 @@ class _MyHomePageState extends State<MyHomePage> {
     );
   }
 
-  Widget buildButton() {
+  Widget buildButton(String buttonText) {
     return Expanded(
       child: OutlineButton(
-        padding: new EdgeInsets.all(24.0),
-        child: Text("1"),
+        padding: new EdgeInsets.all(22.0),
+        child: Text(
+          buttonText,
+          style: TextStyle(
+            fontSize: 20.0,
+            fontWeight: FontWeight.bold,
+          ),
+        ),
         color: Colors.blueAccent,
         textColor: Colors.black,
         onPressed: () => {},
@@ -58,26 +64,40 @@ class _MyHomePageState extends State<MyHomePage> {
             children: [
               Row(
                 children: [
-                  buildButton(),
-                  buildButton(),
-                  buildButton(),
-                  buildButton()
+                  buildButton("7"),
+                  buildButton("8"),
+                  buildButton("9"),
+                  buildButton("/")
                 ],
               ),
               Row(
                 children: [
-                  buildButton(),
-                  buildButton(),
-                  buildButton(),
-                  buildButton()
+                  buildButton("4"),
+                  buildButton("5"),
+                  buildButton("6"),
+                  buildButton("X")
                 ],
               ),
               Row(
                 children: [
-                  buildButton(),
-                  buildButton(),
-                  buildButton(),
-                  buildButton()
+                  buildButton("1"),
+                  buildButton("2"),
+                  buildButton("3"),
+                  buildButton("-")
+                ],
+              ),
+              Row(
+                children: [
+                  buildButton("."),
+                  buildButton("0"),
+                  buildButton("00"),
+                  buildButton("+")
+                ],
+              ),
+              Row(
+                children: [
+                  buildButton("CLEAR"),
+                  buildButton("="),
                 ],
               ),
             ],
