@@ -56,7 +56,16 @@ class _MyHomePageState extends State<MyHomePage> {
     return Container(
       child: Column(
         children: <Widget>[
-          Text("0"),
+          Container(
+            padding: EdgeInsets.symmetric(vertical: 24.0, horizontal: 12.0),
+            child: Text(
+              "0",
+              style: TextStyle(
+                fontSize: 38.0,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+          ),
           Expanded(
             child: Divider(),
           ),
