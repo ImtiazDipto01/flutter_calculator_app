@@ -36,6 +36,10 @@ class _MyHomePageState extends State<MyHomePage> {
     );
   }
 
+  buttonPressed(String buttonText) {
+    print(buttonText);
+  }
+
   Widget buildButton(String buttonText) {
     return Expanded(
       child: OutlineButton(
@@ -49,7 +53,7 @@ class _MyHomePageState extends State<MyHomePage> {
         ),
         color: Colors.blueAccent,
         textColor: Colors.black,
-        onPressed: () => {},
+        onPressed: () => {buttonPressed(buttonText)},
       ),
     );
   }
